@@ -1,0 +1,22 @@
+@import '../../../variables';
+
+.popup-wrapper {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: $grey, $alpha: .8);
+  & .popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: $shadow;
+    max-width: 60vw;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+}

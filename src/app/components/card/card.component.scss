@@ -1,0 +1,10 @@
+@import "../../../variables";
+
+.card {
+  // min-width: 300px;
+  min-height: 400px;
+  // height: auto;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  position: relative;
+}

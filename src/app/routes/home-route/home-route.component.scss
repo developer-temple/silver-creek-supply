@@ -1,0 +1,136 @@
+@import '../../../variables';
+
+.hero-logo {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  margin-top: -40px;
+}
+
+.flex-1 {
+  flex: 1;
+  height: 100%;
+}
+
+.tile-heading {
+  font-size: 2rem;
+}
+
+.tile-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  height: 100%;
+  background-color: rgba(20, 20, 20, .2);
+}
+
+.relative {
+  position: relative;
+}
+
+.section-heading {
+  font-size: 5rem;
+  padding: 1rem 0 0 1rem;
+  font-weight: 300;
+}
+
+.content-container, .image-container {
+  flex: 1;
+  // margin: 0 auto;
+}
+
+.image-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.content-item {
+  font-size: 1.4rem;
+
+}
+
+.testimonial {
+  width: 18vw;
+  height: 100%;
+  color: white;
+  padding: 3rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.testimonial-author {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-body {
+  font-size: 1.4rem;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  & img {
+    border-radius: 50%;
+    box-shadow: $shadow;
+  }
+}
+
+.announcement-title {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.announcement-body {
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-weight: 100;
+}
+
+.featured-image {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  border-radius: 5px;
+}
+
+.feature-separator {
+  height: 3px;
+  background-color: $green;
+  margin: 1rem;
+
+}
+
+.product-name {
+  color:$green;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+.product-text {
+  font-size: 1.2rem;
+  padding: 1rem;
+}

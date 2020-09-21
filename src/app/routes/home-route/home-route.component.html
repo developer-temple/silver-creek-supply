@@ -1,0 +1,179 @@
+<!-- hero -->
+<scs-section
+  [type]="sectionTypes.HERO_RELATIVE"
+  [heroHeight]="vm.heroHeight"
+  [bgUrl]="'assets/images/home-hero.jpg'">
+  <scs-absolute-container
+    [top]="'30%'"
+    [left]="'50%'">
+    <img
+      src="assets/images/logo.png"
+      class="hero-logo"/>
+    <h1
+      class="text-white text-center hero-heading">
+      Grow With Us
+    </h1>
+  </scs-absolute-container>
+</scs-section>
+<!-- end hero -->
+
+<!-- nav -->
+<scs-header></scs-header>
+<!-- end nav-->
+
+<!-- tiles -->
+<scs-section>
+  <scs-flex-container
+    [height]="'400px'"
+    [gap]="'1rem'">
+    <scs-tile
+      class="flex-1"
+      [bgUrl]="'assets/images/lettuce.jpg'">
+      <div class="overlay">
+        <scs-flex-container
+          class="text-white"
+          [direction]="'column'"
+          [justify]="'center'"
+          [align]="'center'"
+          [height]="'100%'">
+          <h4 class="tile-text">Our Hours</h4>
+          <h4 class="tile-text">Monday - Friday</h4>
+          <h4 class="tile-text">8:00 - 4:30</h4>
+          <h4 class="tile-text">Weekends - As Required Seasonally</h4>
+          <h4 class="tile-text">Seasonal Hours As Required</h4>
+        </scs-flex-container>
+      </div>
+    </scs-tile>
+    <scs-tile
+      class="flex-1"
+      [bgUrl]="'assets/images/pigs.jpg'"
+      [bgPosition]="'center center'"
+      (onClick)="productsPopup.open()">
+      <div class="overlay relative">
+        <scs-absolute-container
+          [top]="'50%'"
+          [left]="'50%'">
+          <h3
+            class="text-white text-center tile-heading">
+            Products
+          </h3>
+        </scs-absolute-container>
+      </div>
+    </scs-tile>
+    <scs-tile
+      class="flex-1"
+      [bgUrl]="'assets/images/fiddleheads.jpg'"
+      (onClick)="servicesPopup.open()">
+      <div class="overlay relative">
+        <scs-absolute-container
+          [top]="'50%'"
+          [left]="'50%'">
+          <h3
+          class="text-white text-center tile-heading">
+          Services
+        </h3>
+        </scs-absolute-container>
+      </div>
+    </scs-tile>
+  </scs-flex-container>
+</scs-section>
+<!-- end tiles -->
+
+<!-- about -->
+<scs-band [color]="colors.HONEYDEW">
+  <ng-container *ngIf="vm.about as about">
+    <p class="section-heading font-serif">{{ about.heading }}</p>
+    <scs-section>
+      <scs-flex-container [align]="'center'" [gap]="'1rem'">
+        <div class="content-container">
+          <ng-container *ngFor="let c of about.content; let i = index;">
+            <p class="content-item">{{ c }}</p>
+            <br *ngIf="i < about.content.length - 1"/>
+          </ng-container>
+        </div>
+        <div class="image-container" [ngStyle]="{ 'background-image': getBgUrl(about.imagePath)}"></div>
+      </scs-flex-container>
+    </scs-section>
+  </ng-container>
+</scs-band>
+<!-- end about -->
+
+<!-- testimonials -->
+<ng-container *ngIf="vm.testimonials as testimonials">
+  <p class="section-heading font-serif">{{ testimonials.heading }}</p>
+  <scs-section>
+    <scs-flex-container [gap]="'1rem'" [wrap]="true">
+      <ng-container *ngFor="let item of testimonials.items">
+        <scs-card [bgColor]="colors.TERRA">
+          <div class="testimonial">
+            <div class="avatar-wrapper" *ngIf="item.avatarPath">
+              <img height="64" [src]="item.avatarPath"/>
+            </div>
+            <p class="testimonial-body">{{ item.body }}</p>
+            <p class="testimonial-author text-center font-serif">{{ item.author }}</p>
+          </div>
+        </scs-card>
+      </ng-container>
+    </scs-flex-container>
+  </scs-section>
+</ng-container>
+<!-- end testimonials-->
+
+<!-- announcements -->
+<ng-container *ngIf="vm.announcements as announcements">
+  <scs-band [color]="colors.BLUE">
+    <p class="section-heading font-serif">{{ announcements.heading }}</p>
+    <scs-section>
+      <scs-flex-container [justify]="'space-between'" [align]="'stretch'" [gap]="'10%'">
+        <ng-container *ngFor="let item of announcements.items">
+          <div class="flex-1">
+            <p class="text-center announcement-title">{{ item.title }}</p>
+            <p class="announcement-body">{{ item.body }}</p>
+            <p class="announcement-body"><span class="text-white">-</span> {{ item.date.toLocaleDateString() }}</p>
+          </div>
+        </ng-container>
+      </scs-flex-container>
+    </scs-section>
+  </scs-band>
+</ng-container>
+<!-- end announcements -->
+
+<!-- features -->
+<ng-container *ngIf="vm.features as features">
+  <p class="section-heading font-serif">{{ features.heading }}</p>
+  <scs-section>
+    <scs-flex-container [gap]="'10%'">
+      <ng-container *ngFor="let product of vm.featuredProducts">
+        <div>
+          <div class="featured-image" [ngStyle]="{ 'background-image': getBgUrl(product.imagePath)}"></div>
+          <div class="feature-separator"></div>
+          <p class="product-name text-center">{{ product.name}}</p>
+          <p class="product-text">{{ product.description}}</p>
+        </div>
+      </ng-container>
+    </scs-flex-container>
+  </scs-section>
+</ng-container>
+<!-- end features-->
+
+<!-- cta -->
+<ng-container *ngIf="vm.contact as contact">
+  <scs-band [color]="colors.PERIWINKLE">
+    <p class="section-heading font-serif">{{ contact.heading }}</p>
+    <scs-section>
+    </scs-section>
+  </scs-band>
+</ng-container>
+<!-- end cta -->
+
+<!-- products popup -->
+<scs-popup #productsPopup>
+    <scs-viewer [label]="'Products'" [items]="vm.productsViewerItems" [baseDetailsPath]="'products'" [baseEmailSubject]="'Questions about'"></scs-viewer>
+</scs-popup>
+<!-- popup -->
+
+<!-- services popup -->
+<scs-popup #servicesPopup>
+  <scs-viewer [label]="'Services'" [items]="vm.servicesViewerItems" [baseDetailsPath]="'services'" [baseEmailSubject]="'Questions about'"></scs-viewer>
+</scs-popup>
+<!-- popup -->

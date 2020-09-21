@@ -1,0 +1,87 @@
+@import "../../../variables";
+
+.viewer {
+  background-color: $grey;
+  color: white;
+  padding: 1rem;
+  width: 40vw;
+  // height: 50vh;
+  & .label {
+    font-size: 2.3rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    align-self: flex-end;
+  }
+  & .actions {
+    width: fit-content;
+    min-width: 100px;
+  }
+  & .separator {
+    height: 1px;
+    background-color: white;
+  }
+}
+
+.flex-basis {
+  background: rgb(51, 51, 51);
+  border-radius: 5px;
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.flex-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-item-image {
+  height: 35vh;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.spacer {
+  height: 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.item-heading {
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.item-body {
+  font-weight: normal;
+}
+
+.thumb {
+  width: 32px;
+  height: 50px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: $shadow;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &.selected {
+    border: 1px solid white;
+  }
+}
+
+.padding {
+  padding: .5rem;
+}

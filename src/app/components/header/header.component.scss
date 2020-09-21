@@ -1,0 +1,26 @@
+.header {
+  border-bottom: 1px solid #888;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  & .left, & .center, & .right {
+    height: 100%;
+  }
+  & .left {
+    flex: 0;
+    & .brand-image {
+      height: 100%;
+    }
+  }
+  & .center, & .right {
+    flex: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

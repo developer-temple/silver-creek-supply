@@ -1,0 +1,8 @@
+<ng-container *ngIf="visibility">
+  <div class="popup-wrapper" (click)="close()">
+    <div class="popup-container" (click)="dontClose($event)">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-container>
+
