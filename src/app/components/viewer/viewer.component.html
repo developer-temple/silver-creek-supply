@@ -2,13 +2,13 @@
   <scs-flex-container [justify]="'space-between'" [align]="'center'">
     <div class="controls">
       <p class="label">{{ label }}</p>
-      <scs-button-icon [name]="'decrement'" [color]="'white'" (onClick)="decrement()"></scs-button-icon>
-      <scs-button-icon [name]="'increment'" [color]="'white'" (onClick)="increment()"></scs-button-icon>
+      <scs-button-icon [name]="'decrement'" [color]="'white'" [size]="'1.25rem'" (onClick)="decrement()"></scs-button-icon>
+      <scs-button-icon [name]="'increment'" [color]="'white'" [size]="'1.25rem'" (onClick)="increment()"></scs-button-icon>
     </div>
     <div class="actions">
       <scs-flex-container [justify]="'space-around'" >
-        <scs-button-icon [name]="'details'" [color]="'white'" (onClick)="showDetails()"></scs-button-icon>
-        <scs-button-icon [name]="'at'" [color]="'white'" (onClick)="sendEmail()"></scs-button-icon>
+        <scs-button-icon [name]="'details'" [color]="'white'" [size]="'1.25rem'" (onClick)="showDetails()"></scs-button-icon>
+        <scs-button-icon [name]="'at'" [color]="'white'" [size]="'1.25rem'" (onClick)="sendEmail()"></scs-button-icon>
       </scs-flex-container>
       <div class="separator"></div>
     </div>

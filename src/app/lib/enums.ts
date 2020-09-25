@@ -25,6 +25,10 @@ enum HomePopupContexts {
   SERVICES
 }
 
+enum Icons {
+
+}
+
 
 export {
   SectionTypes,

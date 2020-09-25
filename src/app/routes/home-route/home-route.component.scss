@@ -57,14 +57,12 @@
 }
 
 .testimonial {
-  width: 18vw;
-  height: 100%;
+  // height: 100%;
   color: white;
-  padding: 3rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 5rem;
+  padding: 3rem 1rem 5rem 1rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
 }
 
 .testimonial-author {
@@ -92,6 +90,7 @@
 }
 
 .announcement-title {
+  color: white;
   font-weight: 100;
   letter-spacing: 2px;
   padding-bottom: 1rem;
@@ -101,9 +100,9 @@
 }
 
 .announcement-body {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem;
-  font-weight: 100;
+  color: white;
 }
 
 .featured-image {
@@ -133,4 +132,17 @@
 .product-text {
   font-size: 1.2rem;
   padding: 1rem;
+}
+
+.weather-span {
+  text-align: center;
+  color: white;
+  &.temp {
+    font-size: 3rem;
+  }
+}
+
+.weather-icon {
+  color: white;
+  font-size: 3rem;
 }

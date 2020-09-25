@@ -50,6 +50,14 @@ interface HomeFeaturesContent {
   heading: string;
 }
 
+interface HomeWeatherSection {
+  heading: string;
+}
+
+interface HomeStocksSection {
+  heading: string;
+}
+
 interface HomeContactContent {
   heading: string;
 }
@@ -62,6 +70,8 @@ export {
   HomeTestimonialsContent,
   HomeAnnouncementsContent,
   HomeFeaturesContent,
+  HomeWeatherSection,
+  HomeStocksSection,
   HomeContactContent,
   Testimonial,
   Announcement

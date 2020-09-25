@@ -1,13 +1,23 @@
 import { Injectable } from '@angular/core';
-import { faInfo, faExternalLinkAlt, faAt, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent } from './types';
+import { faInfo, faExternalLinkAlt, faAt, faChevronLeft, faChevronRight, faPhone, faCloud, faSun, faCloudRain, faCloudShowersHeavy, faCloudSun } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent, HomeWeatherSection, HomeStocksSection } from './types';
 
 export const nameToIconsMap: Map<string, any> = new Map<string, any>([
   [ 'info', faInfo ],
   [ 'details', faExternalLinkAlt ],
   [ 'at', faAt ],
   [ 'decrement', faChevronLeft ],
-  [ 'increment', faChevronRight ]
+  [ 'increment', faChevronRight ],
+  [ 'facebook', faFacebook ],
+  [ 'twitter', faTwitter ],
+  [ 'instagram', faInstagram ],
+  [ 'phone', faPhone ],
+  [ 'cloud', faCloud ],
+  [ 'sun', faSun ],
+  [ 'sunCloud', faCloudSun ],
+  [ 'rain', faCloudRain ],
+  [ 'heavyRain', faCloudShowersHeavy ]
 ]);
 
 @Injectable({
@@ -187,7 +197,7 @@ export class AppService {
     items: [
       {
         author: 'Bill',
-        body: 'Semper quis lectus nulla at volutpat diam ut venenatis tellus. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Sit amet venenatis urna cursus eget nunc scelerisque.',
+        body: 'Semper quis lectus nulla at volutpat diam ut venenatis tellus. Cursus in hac habitasse platea dictumst quisque sagittis purus sit.',
         avatarPath: 'assets/images/avatar1.jpg'
       },
       {
@@ -201,27 +211,15 @@ export class AppService {
         avatarPath: 'assets/images/avatar3.jpg'
       },
       {
-        author: 'Bill',
-        body: 'Semper quis lectus nulla at volutpat diam ut venenatis tellus. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Sit amet venenatis urna cursus eget nunc scelerisque.'
+        author: 'Rachel',
+        body: 'Semper quis lectus nulla at volutpat diam ut venenatis tellus. Cabitasse platea dictumst quisque sagittis purus sit. Sit amet venenatis urna cursus eget nunc scelerisque.'
       },
       {
-        author: 'Sally',
+        author: 'Davey',
         body: 'Ultricies mi eget mauris pharetra et. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Nunc sed velit dignissim sodales ut eu sem integer.'
       },
       {
-        author: 'James',
-        body: 'Est placerat in egestas erat imperdiet sed euismod nisi. Erat pellentesque adipiscing commodo elit at. Ultricies integer quis auctor.'
-      },
-      {
-        author: 'Bill',
-        body: 'Semper quis lectus nulla at volutpat diam ut venenatis tellus. Cursus in hac habitasse platea dictumst quisque sagittis purus sit. Sit amet venenatis urna cursus eget nunc scelerisque.'
-      },
-      {
-        author: 'Sally',
-        body: 'Ultricies mi eget mauris pharetra et. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Nunc sed velit dignissim sodales ut eu sem integer.'
-      },
-      {
-        author: 'James',
+        author: 'Susan',
         body: 'Est placerat in egestas erat imperdiet sed euismod nisi. Erat pellentesque adipiscing commodo elit at. Ultricies integer quis auctor.'
       }
     ]
@@ -250,6 +248,14 @@ export class AppService {
 
   public homeFeaturesSection: HomeFeaturesContent = {
     heading: 'Featured Products...'
+  }
+
+  public homeWeatherSection: HomeWeatherSection = {
+    heading: 'Something To Talk About...'
+  }
+
+  public homeStocksSection: HomeStocksSection = {
+    heading: 'Taking Stock...'
   }
 
   public homeContactSection: HomeContactContent = {

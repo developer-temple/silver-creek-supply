@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppService } from 'src/app/lib/app.service';
-import { ViewerItem, Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent } from 'src/app/lib/types';
+import { ViewerItem, Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent, HomeWeatherSection } from 'src/app/lib/types';
 
 @Injectable()
 export class HomeViewmodelService {
@@ -46,6 +46,14 @@ export class HomeViewmodelService {
 
   public get features(): HomeFeaturesContent {
     return this.app.homeFeaturesSection;
+  }
+
+  public get weather(): HomeWeatherSection {
+    return this.app.homeWeatherSection;
+  }
+
+  public get stocks(): HomeWeatherSection {
+    return this.app.homeStocksSection;
   }
 
   public get contact(): HomeContactContent {

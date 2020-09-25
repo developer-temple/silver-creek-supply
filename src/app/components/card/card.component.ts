@@ -11,6 +11,7 @@ export class CardComponent implements OnInit, AfterViewInit {
 
   @Input() public bgColor: Colors | string = null;
   @Input() public flex: string = null;
+  @Input() public height: string = null;
 
   constructor(private renderer: Renderer2) { }
 
@@ -24,6 +25,9 @@ export class CardComponent implements OnInit, AfterViewInit {
       }
       if (this.flex) {
         this.renderer.setStyle(el, 'flex-basis', this.flex);
+      }
+      if (this.height) {
+        this.renderer.setStyle(el, 'height', this.height);
       }
     }
   }

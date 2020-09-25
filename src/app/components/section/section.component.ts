@@ -13,6 +13,7 @@ export class SectionComponent implements AfterViewInit {
   @Input() public heroHeight: string = '100vh';
   @Input() public bgColor: string = null;
   @Input() public bgUrl: string = null;
+  @Input() public bgAttachment: string = null;
 
   public sectionTypes: typeof SectionTypes = SectionTypes;
 
@@ -51,6 +52,10 @@ export class SectionComponent implements AfterViewInit {
       if (this.bgUrl) {
         this.renderer.setStyle(el, 'background-image', `url("${this.bgUrl}")`);
         this.renderer.addClass(el, 'bg-image');
+      }
+
+      if (this.bgAttachment) {
+        this.renderer.setStyle(el, 'background-attachment', this.bgAttachment)
       }
     }
   }

@@ -11,8 +11,11 @@ import { Colors } from 'src/app/lib/enums';
 })
 export class ButtonIconComponent implements OnInit, AfterViewInit {
   @ViewChild('button', { static: false }) public buttonRef: ElementRef;
+
   @Input() public name: string = null;
   @Input() public color: Colors | string = null;
+  @Input() public size: string = null;
+
   @Output() public onClick: EventEmitter<Event> = new EventEmitter<Event>();
 
   public icon: any = null;
@@ -34,6 +37,9 @@ export class ButtonIconComponent implements OnInit, AfterViewInit {
       const el = this.buttonRef.nativeElement;
       if (this.color) {
         this.renderer.setStyle(el, 'color', this.color)
+      }
+      if (this.size) {
+        this.renderer.setStyle(el, 'font-size', this.size);
       }
     }
   }
