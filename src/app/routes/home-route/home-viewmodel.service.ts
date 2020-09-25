@@ -65,7 +65,7 @@ export class HomeViewmodelService {
   }
 
   public get heroHeight(): string {
-    return `${window.innerHeight - 100}px`;
+    return `${window.innerHeight - 140}px`;
   }
 
   constructor(private app: AppService) { }

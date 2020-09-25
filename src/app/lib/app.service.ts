@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { faInfo, faExternalLinkAlt, faAt, faChevronLeft, faChevronRight, faPhone, faCloud, faSun, faCloudRain, faCloudShowersHeavy, faCloudSun } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent, HomeWeatherSection, HomeStocksSection } from './types';
+import { Product, Service, HomeAboutSectionContent, HomeTestimonialsContent, HomeAnnouncementsContent, HomeFeaturesContent, HomeContactContent, HomeWeatherSection, HomeStocksSection, Company } from './types';
 
 export const nameToIconsMap: Map<string, any> = new Map<string, any>([
   [ 'info', faInfo ],
@@ -25,6 +25,12 @@ export const nameToIconsMap: Map<string, any> = new Map<string, any>([
 })
 export class AppService {
   public emailTarget: string = 'developer.temple@gmail.com';
+
+  public company: Company = {
+    phoneNumber: '419-675-2972',
+    address: '17259 County Road 115 Kenton, Ohio 43326',
+    hours: 'Monday - Friday 8:00 - 4:30 | Weekends Seasonal Hours'
+  }
 
   public products: Product[] = [
     {
@@ -193,7 +199,7 @@ export class AppService {
   }
 
   public homeTestimonialsSection: HomeTestimonialsContent = {
-    heading: 'Our Beloved Customers...',
+    heading: 'Some Of Our Beloved Customers...',
     items: [
       {
         author: 'Bill',

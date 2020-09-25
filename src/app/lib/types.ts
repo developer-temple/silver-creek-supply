@@ -18,6 +18,12 @@ interface Service {
   imagePath: string;
 }
 
+interface Company {
+  phoneNumber: string;
+  address: string;
+  hours: string;
+}
+
 interface HomeAboutSectionContent {
   heading: string;
   content: string[];
@@ -66,6 +72,7 @@ export {
   ViewerItem,
   Product,
   Service,
+  Company,
   HomeAboutSectionContent,
   HomeTestimonialsContent,
   HomeAnnouncementsContent,

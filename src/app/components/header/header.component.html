@@ -1,11 +1,19 @@
 <header class="header">
   <div class="left">
-    <img src="assets/images/logo.png" class="brand-image"/>
+    <img src="assets/images/logo.png" class="brand-image" [height]="'100px'"/>
   </div>
   <div class="center">
-    center
+    <span>{{ app.company.phoneNumber }}</span>
+    <span>{{ app.company.hours }}</span>
+    <span>{{ app.company.address }}</span>
+  </div>
+  <div class="contact">
+    <scs-button-icon [name]="'at'" [size]="'3rem'" [color]="'#21aa1a'"></scs-button-icon>
+    <scs-button-icon [name]="'facebook'" [size]="'3rem'" [color]="'#21aa1a'"></scs-button-icon>
   </div>
   <div class="right">
-    right
+    <span class="link">Home</span>
+    <span class="link">Products</span>
+    <span class="link">Services</span>
   </div>
 </header>
